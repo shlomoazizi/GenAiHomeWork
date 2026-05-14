@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Widgets</title>
+    <style>
+        /* המיכל הראשי - הגדרת רשת של 3x2 */
+        .main-container {
+            display: grid;
+            /* יוצר 3 עמודות שוות (1 Fraction כל אחת) */
+            grid-template-columns: repeat(3, 1fr); 
+            /* יוצר 2 שורות, קבעתי גובה של 150 פיקסלים לשם ההדגמה */
+            grid-template-rows: repeat(2, 130px); 
+            /* פער של 20 פיקסלים בין הווידג'טים */
+            gap: 20px; 
+            
+            /* עיצוב בסיסי למיכל עצמו (לא חובה) */
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        /* עיצוב כללי לכל הווידג'טים כדי שייראו כמו כרטיסיות */
+        .widget {
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-family: system-ui, sans-serif;
+            font-size: 1.2rem;
+            color: #374151;
+        }
+
+        /* הווידג'ט הראשון - שימוש ב-Grid למרכוז התוכן הפנימי */
+        .first-widget {
+            display: grid;
+            /* השורת קסם שממרכזת את הטקסט גם אופקית וגם אנכית */
+            place-items: center; 
+            
+            /* הדגשה קלה לווידג'ט הספציפי הזה */
+            background-color: #e0f2fe; 
+            color: #0369a1;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="widget first-widget">
+            אין הודעות חדשות
+        </div>
+        
+        <div class="widget">ווידג'ט 2</div>
+        <div class="widget">ווידג'ט 3</div>
+        <div class="widget">ווידג'ט 4</div>
+        <div class="widget">ווידג'ט 5</div>
+        <div class="widget">ווידג'ט 6</div>
+        
+    </div>
+
+</body>
+</html>

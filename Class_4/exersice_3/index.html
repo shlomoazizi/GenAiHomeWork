@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>טבלת מובילים של משתמשים</title>
+<style>
+    /* הגדרות כלליות לדף כדי למרכז את הכרטיס */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* מכל הטבלה (כרטיס לוח המחוונים) */
+    .leaderboard-container {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 700px;
+        border-radius: 12px; /* פינות מעוגלות */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* צל תיבה ברור */
+        overflow: hidden; /* שומר שהטבלה לא תחרוג מהפינות המעוגלות */
+    }
+
+    /* עיצוב הטבלה */
+    .leaderboard-table {
+        width: 100%;
+        border-collapse: collapse; /* כיווץ הגבולות */
+        text-align: right; /* יישור הטקסט לימין */
+    }
+
+    /* עיצוב כותרות הטבלה */
+    .leaderboard-table thead {
+        background-color: #f9fafb;
+        border-bottom: 2px solid #e5e7eb;
+    }
+
+    .leaderboard-table th {
+        color: #6b7280;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 16px 20px; /* ריפוד לתאים */
+    }
+
+    /* עיצוב תאי הנתונים */
+    .leaderboard-table td {
+        color: #374151;
+        padding: 16px 20px; /* ריפוד לתאים */
+        border-bottom: 1px solid #f3f4f6; /* גבול תחתון עדין בין שורות */
+    }
+
+    /* הסרת הגבול התחתון מהשורה האחרונה כדי לשמור על מראה נקי */
+    .leaderboard-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* אנימציות: אפקט ריחוף על שורות הטבלה */
+    .leaderboard-table tbody tr {
+        transition: background-color 0.3s ease; /* מעבר חלק */
+    }
+
+    .leaderboard-table tbody tr:hover {
+        background-color: #eff6ff; /* צבע סימון בהיר במעבר עכבר */
+    }
+
+    /* עיצוב תגיות סטטוס להמחשה ויזואלית טובה יותר */
+    .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 9999px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .status-active {
+        background-color: #d1fae5;
+        color: #065f46;
+    }
+
+    .status-offline {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+    
+    /* הבלטת המקום הראשון */
+    .rank-first {
+        font-weight: bold;
+        color: #d97706;
+    }
+</style>
+</head>
+<body>
+
+    <div class="leaderboard-container">
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>דירוג</th>
+                    <th>שם משתמש</th>
+                    <th>ציון</th>
+                    <th>סטטוס</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank-first">#1</td>
+                    <td>אבי כהן</td>
+                    <td>12,450</td>
+                    <td><span class="status-badge status-active">מחובר</span></td>
+                </tr>
+                <tr>
+                    <td>#2</td>
+                    <td>דנה לוי</td>
+                    <td>11,200</td>
+                    <td><span class="status-badge status-active">מחובר</span></td>
+                </tr>
+                <tr>
+                    <td>#3</td>
+                    <td>רון אשכנזי</td>
+                    <td>9,840</td>
+                    <td><span class="status-badge status-offline">לא מקוון</span></td>
+                </tr>
+                <tr>
+                    <td>#4</td>
+                    <td>מיכל שפירא</td>
+                    <td>8,130</td>
+                    <td><span class="status-badge status-active">מחובר</span></td>
+                </tr>
+                <tr>
+                    <td>#5</td>
+                    <td>יוסי מזרחי</td>
+                    <td>7,500</td>
+                    <td><span class="status-badge status-offline">לא מקוון</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
