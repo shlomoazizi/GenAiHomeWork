@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .container { display: flex; flex-wrap: wrap; }
+  main { width: 70%; background: skyblue; height: 100px; }
+  aside { width: 30%; background: tomato; height: 100px; }
+
+  @media (max-width: 768px) {
+    main, aside { width: 100%; }
+  }
+</style>
+
+<div class="container">
+  <main>70%</main>
+  <aside>30%</aside>
+</div>

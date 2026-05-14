@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+    <!-- ה-span בכלל לא יסתכל עליו, כי הוא מקשיב רק ל"אבא" שלו (ה-div). -->
+<head>
+    <meta charset="UTF-8">
+    <title>תרגול יחידות EM לעומת השורש</title>
+    <style>
+        /* גודל גופן בשורש המסמך */
+        html {
+            font-size: 50px;
+        }
+
+
+        /* האלמנט המכיל (ההורה) */
+        .parent-div {
+            font-size: 20px;
+        }
+
+        /* האלמנט הפנימי שמשתמש ב-em */
+        .child-span {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p>default of html font size </p>
+
+    <div class="parent-div">
+        אני ה-div, הגודל שלי הוא 20px.
+        <br><br>
+        <span class="child-span">
+            אני ה-span, הגודל שלי הוא 2em.
+        </span>
+    </div>
+
+</body>
+</html>

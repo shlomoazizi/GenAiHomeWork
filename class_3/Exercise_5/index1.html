@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תרגול יחידות Viewport</title>
+    <style>
+        /* ביטול שוליים ברירת מחדל של הדפדפן כדי שהכותרת תיצמד לקצוות */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        header {
+            /* הגדרת הגובה ל-20% מגובה המסך */
+            height: 100vh;
+            /* הגדרת הרוחב ל-100% מרוחב המסך */
+            width: 100vw;
+            
+            /* עיצוב ויזואלי כדי שנוכל לראות את האלמנט */
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        זהו ה-Header שלי (100vh x 100vw)
+    </header>
+
+    <main>
+        <h1>hjhjnmj</h1>
+        <p>נסו לשנות את גודל חלון הדפדפן (להקטין או להגדיל) ותראו כיצד גובה הכותרת משתנה בהתאם.</p>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הדגמת Position</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; height: 2000px; /* גובה רב כדי לאפשר גלילה */ }
+
+        /* Sticky: תפריט שנדבק למעלה */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        /* Relative + Absolute: תיבה בתוך תיבה */
+        .parent {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: lightgrey;
+            margin: 50px auto;
+            border: 2px solid #555;
+        }
+
+        .child {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+
+        /* Fixed: כפתור שנשאר קבוע במסך */
+        .fixed-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>תפריט דביק (Sticky Menu) - גללו למטה!</nav>
+
+    <div class="parent">
+        תיבת אב (Relative)
+        <div class="child"></div> </div>
+
+    <div style="padding: 20px; text-align: center;">
+        <h2>גללו למטה כדי לראות את ה-Sticky וה-Fixed בפעולה</h2>
+        <p>(כאן יש הרבה טקסט דמיוני כדי ליצור גלילה...)</p>
+    </div>
+
+    <button class="fixed-btn">צור קשר (Fixed)</button>
+
+</body>
+</html>
