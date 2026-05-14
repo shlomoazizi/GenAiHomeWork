@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>השוואת Box Sizing</title>
+    <style>
+        /* הגדרות משותפות לשתי התיבות */
+        .box1, .box2 {
+            width: 250px;
+            background-color: #add8e6; /* lightblue */
+            padding: 30px;
+            border: 10px solid black;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        /* התיבה הראשונה - ברירת המחדל */
+        .box1 {
+            box-sizing: content-box;
+        }
+
+        /* התיבה השנייה - השיטה המודרנית */
+        .box2 {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        box-sizing: content-box<br>
+        (נראה רחב יותר)
+    </div>
+
+    <div class="box2">
+        box-sizing: border-box<br>
+        (נשאר בדיוק 250px)
+    </div>
+
+</body>
+</html>
