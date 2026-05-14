@@ -1,0 +1,30 @@
+/* הגדרות המיכל הראשי */
+.product-container {
+  display: flex;
+  flex-wrap: wrap; /* מאפשר לכרטיסים לרדת שורה כשאין מספיק מקום */
+  gap: 20px; /* מוסיף ריווח אחיד בין הכרטיסים */
+  padding: 20px;
+  direction: rtl; /* יישור מימין לשמאל לעברית */
+}
+
+/* הגדרות כרטיס המוצר */
+.product-card {
+  
+  flex: 1 1 250px;
+  
+  /* עיצוב כללי לכרטיס */
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box; /* מוודא שהריווח הפנימי לא מגדיל את הכרטיס */
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* הגדרת התמונה כך שתתאים לרוחב הכרטיס */
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
